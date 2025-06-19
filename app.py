@@ -30,8 +30,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-model = joblib.load('models\lasso_model.pkl')  # atau model lain
-scaler = joblib.load('models\column_scaler.pkl')  # ColumnTransformer
+model = joblib.load('models/lasso_model.pkl')  # atau model lain
+scaler = joblib.load('models/column_scaler.pkl')  # ColumnTransformer
 feature_columns = joblib.load('models/feature_columns.pkl')  # List kolom final
 
 
