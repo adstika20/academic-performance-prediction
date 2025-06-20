@@ -1,9 +1,4 @@
-numpy
-pandas
-pip
-plotly
-scikit-learn
-seaborn
-streamlit
-joblib
-
+joblib==1.2.0
+pandas==2.3.0
+streamlit==1.39.0
+scikit-learn==1.6.1
