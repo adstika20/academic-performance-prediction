@@ -1,6 +1,6 @@
 joblib==1.2.0
 pandas==2.3.0
 streamlit==1.39.0
-numpy
-scikit-learn
+numpy==2.0.2
+scikit-learn==1.6.1
 setuptools
