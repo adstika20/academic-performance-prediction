@@ -106,7 +106,44 @@ Proyek ini memanfaatkan beberapa model regresi untuk memprediksi nilai ujian akh
 Model-model ini, bersama dengan ```column_scaler``` (untuk penskalaan fitur) dan ```feature_columns``` (untuk memastikan konsistensi fitur), telah dilatih dan disimpan dalam format ```.pkl``` di folder ```models/```.
 
 ## Hasil dan Analisis
+### 1. Performa Model
 
+Setelah dilakukan pelatihan terhadap tiga algoritma regresi (Linear, Ridge, Lasso), model **Lasso Regression** menunjukkan performa terbaik berdasarkan:
+
+- **MAE**: 3.72  
+- **RMSE**: 4.21  
+- **R² Score**: 0.86
+
+#### Perbandingan 3 Model:
+![Perbandingan Model](docs/model_comparison.png)
+
+---
+
+### 🎯 2. Feature Importance
+
+Model menunjukkan bahwa fitur-fitur berikut memiliki pengaruh paling signifikan terhadap nilai ujian akhir:
+
+![Top 10 Fitur](docs/top10_features.png)
+
+---
+
+### 📉 3. Evaluasi Error
+
+Residual plot di bawah menunjukkan penyebaran kesalahan prediksi model:
+
+![Residual Plot](docs/residual_plot.png)
+
+---
+
+### 📊 4. Insight dari Data (EDA)
+
+#### Apakah siswa yang belajarnya lama memiliki nilai ujian lebih tinggi?
+![EDA Jam Belajar](docs/eda_study_hours.png)
+
+#### Apakah durasi tidur memengaruhi nilai ujian siswa?
+![EDA Tidur](docs/eda_sleep_hours.png)
+
+---
 
 ## Kontak
 
