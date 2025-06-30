@@ -70,7 +70,7 @@ streamlit run app.py
 
 ## Dataset
 
-Dataset ini adalah kumpulan data simulasi yang dirancang untuk meneliti hubungan antara kebiasaan hidup sehari-hari dengan prestasi akademik mahasiswa. 
+Dataset berasal dari [kaggle](https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance) yang di peroleh melalui simulasi untuk meneliti hubungan antara kebiasaan hidup sehari-hari dengan prestasi akademik mahasiswa. 
 Dataset berisi 1.000 catatan mahasiswa sintetis dengan lebih dari 15 variabel yang mencakup jam belajar, pola tidur, penggunaan media sosial, kualitas diet, kesehatan mental, dan nilai ujian akhir. 
 Data ini dibuat menggunakan pola yang realistis namun sepenuhnya artifisial untuk tujuan edukasi dan latihan. Dataset sangat cocok digunakan untuk berbagai proyek analisis data seperti machine learning (terutama untuk prediksi nilai), 
 analisis regresi (mencari korelasi antar variabel), clustering (pengelompokan mahasiswa berdasarkan pola kebiasaan), dan visualisasi data. 
