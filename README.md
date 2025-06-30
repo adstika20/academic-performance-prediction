@@ -105,25 +105,27 @@ Proyek ini memanfaatkan beberapa model regresi untuk memprediksi nilai ujian akh
 
 Model-model ini, bersama dengan ```column_scaler``` (untuk penskalaan fitur) dan ```feature_columns``` (untuk memastikan konsistensi fitur), telah dilatih dan disimpan dalam format ```.pkl``` di folder ```models/```.
 
-## Hasil dan Analisis
+## 📊 Hasil dan Analisis  
 ### 1. Performa Model
 
 Setelah dilakukan pelatihan terhadap tiga algoritma regresi (Linear, Ridge, Lasso), model **Lasso Regression** menunjukkan performa terbaik berdasarkan:
 
-- **MAE**: 3.72  
-- **RMSE**: 4.21  
-- **R² Score**: 0.86
+- **MAE**: 4.13 
+- **RMSE**: 5.09
+- **R² Score**: 0.90
+
+Nilai Mean Absolute Error (MAE) sebesar 4.13, yang merupakan nilai terendah dibandingkan Linear dan Ridge, meskipun selisihnya tampak kecil, MAE yang lebih rendah mengindikasikan bahwa rata-rata kesalahan prediksi model Lasso terhadap nilai aktual lebih kecil, sehingga lebih akurat dalam konteks aplikasi ini. Lasso Regression menggunakan teknik regularisasi L1, yang mampu menekan atau bahkan mengeliminasi fitur-fitur yang kurang relevan dengan mengatur koefisiennya menjadi nol. Ini sangat penting dalam proyek ini yang melibatkan lebih dari 15 variabel kebiasaan siswa, karena Lasso secara otomatis menyaring dan memilih variabel-variabel yang paling berpengaruh terhadap nilai akhir siswa.
 
 #### Perbandingan 3 Model:
-![Perbandingan Model](docs/model_comparison.png)
+![Perbandingan Model](https://github.com/adstika20/academic-performance-prediction/blob/main/images/MAE%20RMSE%20R2.png)
 
 ---
 
-### 🎯 2. Feature Importance
+### 2. Feature Importance
 
 Model menunjukkan bahwa fitur-fitur berikut memiliki pengaruh paling signifikan terhadap nilai ujian akhir:
 
-![Top 10 Fitur](docs/top10_features.png)
+![Top 10 Fitur](https://github.com/adstika20/academic-performance-prediction/blob/main/images/Feature%20importance%20(Lasso).png)
 
 ---
 
@@ -131,19 +133,32 @@ Model menunjukkan bahwa fitur-fitur berikut memiliki pengaruh paling signifikan 
 
 Residual plot di bawah menunjukkan penyebaran kesalahan prediksi model:
 
-![Residual Plot](docs/residual_plot.png)
+![Residual Plot](https://github.com/adstika20/academic-performance-prediction/blob/main/images/Residual%20Plot.png)
+
+Berdasarkan residual plot, model Lasso menunjukkan performa yang paling konsisten dan stabil dibanding Linear maupun Ridge. Hal ini ditunjukkan dari sebaran residual yang lebih rapat di sekitar nol dan hampir tidak ada prediksi yang meleset jauh. Pola penyebaran yang acak juga menunjukkan bahwa model telah mampu menangkap hubungan dalam data dengan baik tanpa indikasi overfitting maupun underfitting.
 
 ---
 
-### 📊 4. Insight dari Data (EDA)
+### 4. Insight dari Data (EDA)
 
 #### Apakah siswa yang belajarnya lama memiliki nilai ujian lebih tinggi?
-![EDA Jam Belajar](docs/eda_study_hours.png)
+![EDA Jam Belajar](https://github.com/adstika20/academic-performance-prediction/blob/main/images/study_hours_per_day%20(hours).png)
+
+Grafik menunjukkan adanya hubungan positif yang kuat antara durasi belajar harian dan nilai ujian siswa. Siswa yang belajar lebih lama cenderung memperoleh skor ujian yang lebih tinggi, dan pola ini konsisten di semua kelompok gender. Meski demikian, setelah mencapai durasi belajar tertentu, peningkatan skor cenderung melambat, yang mengindikasikan bahwa ada batas maksimal efektivitas waktu belajar terhadap hasil ujian.
+
 
 #### Apakah durasi tidur memengaruhi nilai ujian siswa?
-![EDA Tidur](docs/eda_sleep_hours.png)
+![EDA Tidur](https://github.com/adstika20/academic-performance-prediction/blob/main/images/Sleep%20Duration%20(hours).png)
+
+Hubungan durasi tidur dengan nilai ujian yang terbagi berdasarkan gender memang ada korelasi, namun sangat lemah. Garis tren yang mendatar dan penyebaran data yang sangat acak menunjukkan bahwa baik tidur sedikit maupun banyak tidak secara langsung memengaruhi performa akademik secara signifikan. Oleh karena itu, durasi tidur tampaknya bukan faktor utama dalam menentukan hasil ujian, setidaknya dalam konteks data ini.
 
 ---
 
-## Kontak
+## 📌 Penutup
+
+Dokumentasi, analisis, dan insight tambahan ada di [Medium](https://atikansh20.medium.com/machine-learning-regression-a5e90062bf22), sedangkan demo aplikasinya bisa diakses langsung via [Streamlit](https://academic-performance-prediction-mtdyqvld7sghnpbqfareba.streamlit.app/).
+
+
+> This is just one of many small steps in exploring data and building something useful with it.
+Let’s see where it goes next! 🚀
 
